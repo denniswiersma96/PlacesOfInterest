@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.item_place.view.*
 
-public class PlaceAdapter {
+class PlaceAdapter(private val places: List<Place>) :
+    RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
 
     lateinit var context: Context
 
@@ -22,7 +24,7 @@ public class PlaceAdapter {
         return places.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, postion: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(places[position])
     }
 

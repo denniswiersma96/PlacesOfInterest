@@ -1,5 +1,6 @@
 package com.example.placesofinterest
 
+
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +29,6 @@ class MainActivity : AppCompatActivity() {
         for (i in Place.PLACE_NAMES.indices) {
             places.add(Place(Place.PLACE_NAMES[i], Place.PLACE_RES_DRAWABLE_IDS[i]))
         }
-        placeAdapter.notifyDataSetChanges()
+        placeAdapter.notifyDataSetChanged()
     }
 }
